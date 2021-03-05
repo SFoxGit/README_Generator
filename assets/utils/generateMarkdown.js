@@ -36,10 +36,8 @@ function renderLicenseLink(license) {
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-if (data.license) {
-var licenseBadge = renderLicenseBadge(data.license);
-var licenseLink = renderLicenseLink(data.license);
-
+if (license) {
+  return licenseBadge, licenseLink
 } else {
   return ''
 } 
@@ -47,7 +45,89 @@ var licenseLink = renderLicenseLink(data.license);
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data} .title
+  var licenseBadge = renderLicenseBadge(data.license);
+  var licenseLink = renderLicenseLink(data.license);
+  // renderLicenseSection(data.license);
+  return `# ${data.title}
+
+
+  ${licenseBadge}
+  
+  ---
+  ## Author
+  
+  ${data.name}
+  
+  
+  | [GitHub](https://github.com/${data.gitName}) | [Email](${data.email}) |
+  
+  ---
+  ## Project Links:
+  
+  - Deployed site: [GitHub Pages](https://${data.gitName}.github.io/${data.gitRepo}/)
+  - GitHub: [${data.gitName}](https://github.com/${data.gitName}/${data.gitRepo})
+  
+  ---
+  ## Table of Contents
+  
+  - [Description](##Description)
+  
+  - [Installation](##Installation)
+  
+  - [Usage](##Usage)
+  
+  - [Tests](##Tests)
+  
+  - [Questions](##Questions)
+  
+  - [License](##License)
+  
+  - [Contributions](##Contributing)
+  
+  - [Credits](##Credits)
+  
+  ---
+  ## Description
+  
+  ${data.description}
+  
+  ---
+  ## Installation
+  
+  ${data.install}
+  
+  ---
+  ## Usage
+  
+  ${data.usage}
+  
+  ---
+  ## Tests
+  
+  ${data.tests}
+  
+  ---
+  ## Questions
+  
+  If you have any questions or concerns please contact me at ${data.email} or any of my contact information above. [Back to Author](##Author)
+  
+  ---
+  ## License
+  
+  ${licenseLink}
+  
+  ---
+  ## Contributing
+  
+  ${data.contribute}
+  
+  If you'd like to contribute, please contact me.
+  
+  ---
+  ## Credits
+  
+  ${data.credits}
+  
 
 `;
 }

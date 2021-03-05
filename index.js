@@ -56,14 +56,32 @@ const questions = [
   },
   {
     type: 'input',
-    message: 'Questions:',
-    name: 'questions',
+    message: 'Please enter any credits you need to make for your project',
+    name: 'credits',
+  },
+  {
+    type: 'list',
+    message: 'Using gitHub?',
+    name: 'gitTorF',
+    choices: ['Yes', 'No']
+  },
+  {
+    type: 'input',
+    message: 'What is your gitHub username?',
+    name: 'gitName',
+    when: (answers) => answers.gitTorF === 'Yes'
+  },
+  {
+    type: 'input',
+    message: 'What is the name of your gitHub repository?',
+    name: 'gitRepo',
+    when: (answers) => answers.gitTorF === 'Yes'
   },
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  fs.writeFile('README.md', data, function(err) {
+  fs.writeFile('README2.md', data, function(err) {
     if (err) throw err;
     console.log('successfully saved')
   })
