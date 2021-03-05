@@ -1,11 +1,18 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
-const inquirer = require('inquirer');
+const inquirer = require('./assets/node_modules/inquirer');
+const goToGM = require('./assets/utils/generateMarkdown');
 
 
 
 // TODO: Create an array of questions for user input
 const questions = [
+  {
+    type: 'input',
+    message: 'What is your project name?',
+    name: 'title',
+  }, 
+  
   {
     type: 'input',
     message: 'What is your project name?',
@@ -22,37 +29,48 @@ const questions = [
     name: 'install',
   },
   {
-    type:'input', 
-    message:'',
-    name:'usage',
+    type: 'input',
+    message: 'How can this be used?',
+    name: 'usage',
   },
   {
-    type:'input', 
-    message:'',
-    name:'license',
+    type: 'input',
+    message: 'What licenses would you like to use?',
+    name: 'license',
   },
   {
-    type:'input', 
-    message:'',
-    name:'contribute',
+    type: 'input',
+    message: 'Any contributors?',
+    name: 'contribute',
   },
   {
-    type:'input', 
-    message:'',
-    name:'tests',
+    type: 'input',
+    message: 'Tests performed:',
+    name: 'tests',
   },
   {
-    type:'input', 
-    message:'',
-    name:'questions',
+    type: 'input',
+    message: 'Questions:',
+    name: 'questions',
   },
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+  console.log(data);
+  
+  }
+
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  inquirer
+    .prompt(questions)
+    .then(answers => {
+      const fileName = answers.project;
+      writeToFile(fileName, goToGM(answers));
+    })
+}
 
 // Function call to initialize app
 init();
