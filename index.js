@@ -15,8 +15,13 @@ const questions = [
   
   {
     type: 'input',
-    message: 'What is your project name?',
-    name: 'project',
+    message: 'What is your name?',
+    name: 'name',
+  },
+  {
+    type: 'input',
+    message: 'What is your email?',
+    name: 'email',
   },
   {
     type: 'input',
@@ -34,9 +39,10 @@ const questions = [
     name: 'usage',
   },
   {
-    type: 'input',
+    type: 'list',
     message: 'What licenses would you like to use?',
     name: 'license',
+    choices: ['CC0 (Creative Commons Zero)', 'MIT', 'Apache 2.0', 'BSD 3-Clause']
   },
   {
     type: 'input',
@@ -57,7 +63,10 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  console.log(data);
+  fs.writeFile('README.md', data, function(err) {
+    if (err) throw err;
+    console.log('successfully saved')
+  })
   
   }
 
