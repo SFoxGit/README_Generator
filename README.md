@@ -1,82 +1,92 @@
 # README_Generator
-Creates and dynamically generates the content of a README file via command-line prompts
 
 
----
-## Author
-
-Shawn Fox
-
-
-| [GitHub](https://github.com/SFoxGit) | [Email](sfoxss4@gmail.com) |
-
----
-## Project Links:
-
-- Deployed site: [GitHub Pages]()
-- GitHub: [SFoxGit]()
-
----
-## Table of Contents
-
-- [Description](##Description)
-
-- [Requirements](##Requirements)
-
-- [Progress](##Progress)
-
-- [Contributions](##Contributing)
-
-- [Credits](##Credits)
-
----
-## Description
-
-
----
-## Requirements
-
-User Story
-AS A developer
-I WANT a README generator
-SO THAT I can quickly create a professional README for a new project
-
-Acceptance Criteria
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-WHEN I enter my project title
-THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-WHEN I enter my GitHub username
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-WHEN I enter my email address
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
-
----
-### Must include:
-
-A sample README generated using the application must be submitted.
-Video walkthrough
-    How to invoke
-    Entrance of responses
-    Generate README that matches the user input and has a functioning table of contents
-
-    
----
-## Progress
-    
-
----
-## Contributing
-
-
----
-## Credits
-
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  
+  ---
+  ## Author
+  
+  Shawn Fox
+  
+  
+  | [GitHub](https://github.com/sfoxgit) | [Email](sfoxgit@gmail.com) |
+  
+  ---
+  ## Project Links:
+  
+  
+  - GitHub: [sfoxgit](https://github.com/sfoxgit/README_Generator)
+  
+  ---
+  ## Table of Contents
+  
+  - [Description](##Description)
+  
+  - [Installation](##Installation)
+  
+  - [Usage](##Usage)
+  
+  - [Tests](##Tests)
+  
+  - [Questions](##Questions)
+  
+  - [License](##License)
+  
+  - [Contributions](##Contributing)
+  
+  - [Credits](##Credits)
+  
+  ---
+  ## Description
+  
+  This is a readme generator using command prompts from node js to create a file and write to all the parts you need to a great README
+  
+ 
+ ![image1](./assets/images/testreadme.jpg) 
+ 
+ 
+ 
+ ![image2](./assets/images/testreadme2.jpg) 
+ 
+ 
+  
+  ---
+  ## Installation
+  
+  Clone this repo <br/> If you do not already have node.js download it here: https://nodejs.org/en/download/ <br/> Open your terminal and cd into this cloned repo folder <br/> put the following into the command line: npm init -y <br/> Now you will have a package.json <br/> Now enter the following into the command line: npm i inquirer <br/> This will add the inquirer modules to your folder. <br/> Now enter: node index.js <br/> Follow the prompts!
+  
+  ---
+  ## Usage
+  
+  Once you've followed the installation instructions, the prompts will lead you through. Once finished a folder will be written inside the current directory named the same as your project name you entered in the prompts. Inside that will be your README.md, move that into your current project folder. (Advanced users can directly write it to the project folder see end of the video for instructions)
+  
+  ---
+  ## Tests
+  
+  With images <br/> Without images <br/> With gitHub pages <br/> Without gitHub pages <br/>
+  
+  ---
+  ## Questions
+  
+  If you have any questions or concerns please contact me at sfoxgit@gmail.com or any of my contact information above. [Back to Author](##Author)
+  
+  
+  --- 
+ 
+ ## License 
+ 
+ https://opensource.org/licenses/MIT
+  
+  ---
+  ## Contributing
+  
+  
+  
+  If you'd like to contribute, please contact me.
+  
+  ---
+  ## Credits
+  
+  https://gist.github.com/lukas-h for the license badges
+  
 
