@@ -53,7 +53,7 @@
   ---
   ## Installation
   
-  Clone this repo <br/> If you do not already have node.js download it here: https://nodejs.org/en/download/ <br/> Open your terminal and cd into this cloned repo folder <br/> put the following into the command line: npm init -y <br/> Now you will have a package.json <br/> Now enter the following into the command line: npm i inquirer <br/> This will add the inquirer modules to your folder. <br/> Now enter: node index.js <br/> Follow the prompts!
+  Clone this repo <br/> If you do not already have node.js download it here: https://nodejs.org/en/download/ <br/> Open your terminal and cd into this cloned repo folder <br/> cd into the assets folder <br/> Now enter the following into the command line: npm i inquirer <br/> This will add the inquirer modules to your folder. <br/> cd .. out of assets and back into the root folder <br/> Now enter: node index.js <br/> Follow the prompts!
   
   ---
   ## Usage
